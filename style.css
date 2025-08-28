@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container
+{
+    width: 100%;
+    height:100vh;
+    padding: 10px;
+    background-color: rgb(227, 165, 48);
+
+}
+.todo{
+   width: 100%; /*/*distribute the remaining space equally on both sides.”*/
+    max-width: 540px;
+    margin: 100px auto 20px; /*distribute the remaining space equally on both sides.”*/
+    padding: 40px 30px;
+    /* right and left are equally distributed */
+    background-color: white;
+    border-radius: 10px;
+   
+}
+.todo h2{
+    
+    display:flex ;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+
+}
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    border:1px solid;
+    border-color: brown;
+    
+}
+input{
+    flex:1;
+   border:none;
+   outline: none;
+   background-color: transparent;
+   padding:10px;
+   font-weight: 40px;
+
+
+}
+button{
+    border:none;
+    background-color: brown;
+    border-radius: 40px;
+padding: 10px 10px;
+font-size: 16px;
+color: beige;
+
+
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+
+}
+ul li::before
+/* creates a virtual element before the content of every <li>. */
+{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width:28px;
+border-radius: 50%;
+background-image: url(images/unchecked.png);
+background-size: cover;
+background-position: center;
+top:12px;
+left:8px
+/* When you use position: absolute;, the top, left, right, bottom values are measured relative to the nearest positioned ancestor (an element with position: relative, absolute, or fixed). */
+/* So top: 12px means 12px down from the top edge of the li. */}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image:url(images/checked.png)
+}
+/* There is only one ::before per li. */
+/* The .checked::before rule just overrides the base styles of li::before whenever the li has that class. */
+ul li span{
+    position: absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    font-size:22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: rgb(223, 104, 104);
+}
+
+button:last-child {
+    margin-left: 10px;
+    background-color: brown;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:last-child:hover {
+    background-color: darkgreen;
+}

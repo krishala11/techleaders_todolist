@@ -13,11 +13,10 @@
 
 }
 .todo{
-   width: 100%; /*/*distribute the remaining space equally on both sides.”*/
-    max-width: 540px;
-    margin: 100px auto 20px; /*distribute the remaining space equally on both sides.”*/
+   width: 100%;
+    margin: 100px auto 20px; 
     padding: 40px 30px;
-    /* right and left are equally distributed */
+    
     background-color: white;
     border-radius: 10px;
    
@@ -77,7 +76,7 @@ ul li{
 
 }
 ul li::before
-/* creates a virtual element before the content of every <li>. */
+
 {
     content:'';
     position: absolute;
@@ -89,8 +88,7 @@ background-size: cover;
 background-position: center;
 top:12px;
 left:8px
-/* When you use position: absolute;, the top, left, right, bottom values are measured relative to the nearest positioned ancestor (an element with position: relative, absolute, or fixed). */
-/* So top: 12px means 12px down from the top edge of the li. */}
+}
 
 ul li.checked{
     color: #555;
@@ -100,8 +98,7 @@ ul li.checked{
 ul li.checked::before{
     background-image:url(images/checked.png)
 }
-/* There is only one ::before per li. */
-/* The .checked::before rule just overrides the base styles of li::before whenever the li has that class. */
+
 ul li span{
     position: absolute;
     right:0;
